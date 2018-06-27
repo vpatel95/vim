@@ -13,7 +13,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
@@ -109,9 +109,11 @@ imap <F3> <ESC>:mksession!<CR>i
 nmap <leader>sn :set number<CR>
 nmap <leader>snn :set nonumber<CR>
 
-" Buffer movement key bindings
+" Buffer and tab movement key bindings
 nnoremap <leader>q :bp<CR>
 nnoremap <leader>w :bn<CR>
+nnoremap <leader>n :tabn<CR>
+nnoremap <leader>p :tabp<CR>
 
 " CTags key bindings
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -140,4 +142,3 @@ imap <C-f> :FZF<CR>
 
 " Airline configs
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
