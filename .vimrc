@@ -38,8 +38,8 @@ set t_Co=256
 
 
 " Set cscope, ctags and doxygen toolkit
-source ~/.vim/cscope_maps.vim
-source ~/.vim/DoxygenToolkit.vim
+source ~/.vim/bundle/cscope_maps.vim
+source ~/.vim/bundle/DoxygenToolkit.vim
 set tags=./tags
 
 
