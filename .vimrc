@@ -14,8 +14,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'tomasr/molokai'
@@ -34,7 +34,6 @@ set termencoding=utf-8
 
 " Turn on syntax highlighting
 syntax on
-set t_Co=256
 
 
 " Set cscope, ctags and doxygen toolkit
@@ -54,8 +53,6 @@ set expandtab
 set textwidth=80
 set showcmd
 set wildmenu
-set lazyredraw
-set showmatch
 set backspace=indent,eol,start
 
 filetype on
@@ -114,6 +111,15 @@ nnoremap <leader>q :bp<CR>
 nnoremap <leader>w :bn<CR>
 nnoremap <leader>n :tabn<CR>
 nnoremap <leader>p :tabp<CR>
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
 
 " CTags key bindings
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
