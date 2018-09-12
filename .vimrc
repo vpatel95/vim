@@ -1,11 +1,11 @@
 " VIM Configuration file
-" Author    : V8d Patel
-" Date      : 26 June 2018
+" Author    : Ved Patel
+" Date      : 12 September 2018
 
 
 " Disable vi compatibility
 set nocompatible
-filetype off
+filetype plugin on
 
 " Setup Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,8 +14,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'tomasr/molokai'
@@ -45,12 +43,11 @@ set tags=./tags
 " Set indentation and UI configs
 set autoindent
 set smartindent
-set background=dark
+set background=light
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set textwidth=80
 set showcmd
 set wildmenu
 set backspace=indent,eol,start
@@ -148,3 +145,6 @@ imap <C-f> :FZF<CR>
 
 " Airline configs
 let g:airline_powerline_fonts = 1
+let g:AutoPairs = {}
+
+hi MatchParen cterm=none ctermbg=cyan ctermfg=white
