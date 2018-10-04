@@ -1,6 +1,6 @@
 " VIM Configuration file
 " Author    : Ved Patel
-" Date      : 12 September 2018
+" Date      : 4 October 2018
 
 
 " Disable vi compatibility
@@ -15,11 +15,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-fugitive'
-
-Plugin 'tomasr/molokai'
-Plugin 'altercation/solarized'
-Plugin 'chriskempson/tomorrow-theme'
-Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 
@@ -67,9 +62,9 @@ nnoremap <leader>nhs :nohlsearch<CR>
 
 " Folding
 set foldenable
-set foldlevelstart=10
-set foldnestmax=10
-set foldmethod=syntax
+set foldlevelstart=2
+set foldnestmax=2
+set foldmethod=indent
 
 nmap <leader><space> za
 nmap <leader>fe :set foldenable
@@ -79,19 +74,10 @@ nmap <leader>fd :set nofoldenable
 " Autocmd
 augroup project
     autocmd!
-    autocmd BufRead,BufNewFile *.h,*.c set filetype=c | set cindent
+    autocmd BufRead,BufNewFile *.h,*.c set filetype=c | set cindent | set foldmethod=syntax
+    autocmd BufRead,BufNewFile *.go set filetype=go | set foldmethod=syntax
+    autocmd FileType ruby,javascript,css,scss,html set tabstop=2 | set softtabstop=2 | set shiftwidth=2 | set expandtab | set autoindent
 augroup END
-
-autocmd FileType * set tabstop=4|set softtabstop=4|set shiftwidth=4|set expandtab|set autoindent
-autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4
-autocmd FileType go setlocal ts=4 sw=4 sts=4
-autocmd FileType python set tabstop=4|set softtabstop=4|set shiftwidth=4|set expandtab|set autoindent
-autocmd FileType ruby set tabstop=2|set softtabstop=2|set shiftwidth=2|set expandtab|set autoindent
-autocmd FileType javascript set tabstop=2|set softtabstop=2|set shiftwidth=2|set expandtab|set autoindent
-autocmd FileType css set tabstop=2|set softtabstop=2|set shiftwidth=2|set expandtab|set autoindent
-autocmd FileType scss set tabstop=2|set softtabstop=2|set shiftwidth=2|set expandtab|set autoindent
-autocmd FileType html set tabstop=2|set softtabstop=2|set shiftwidth=2|set expandtab|set autoindent
-
 
 " Save key bindings
 nmap <F2> :w<CR>
