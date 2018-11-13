@@ -134,3 +134,4 @@ let g:airline_powerline_fonts = 1
 let g:AutoPairs = {}
 
 hi MatchParen cterm=none ctermbg=cyan ctermfg=white
+hi Visual cterm=none ctermbg=250
