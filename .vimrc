@@ -135,3 +135,6 @@ let g:AutoPairs = {}
 
 hi MatchParen cterm=none ctermbg=cyan ctermfg=white
 hi Visual cterm=none ctermbg=250
+
+hi ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
