@@ -46,6 +46,7 @@ set expandtab
 set showcmd
 set wildmenu
 set backspace=indent,eol,start
+set ttimeoutlen=0
 
 filetype on
 filetype plugin on
