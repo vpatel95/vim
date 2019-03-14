@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 
@@ -30,8 +31,7 @@ syntax on
 
 
 " Set cscope, ctags and doxygen toolkit
-source ~/.vim/bundle/cscope_maps.vim
-source ~/.vim/bundle/DoxygenToolkit.vim
+source ~/.vim/scripts/cscope_maps.vim
 set tags=./tags
 
 
@@ -129,10 +129,9 @@ imap <leader>ci <ESC>:set cindent<CR>i
 nmap <C-f> :FZF<CR>
 imap <C-f> :FZF<CR>
 
-
-" Airline configs
-let g:airline_powerline_fonts = 1
-let g:AutoPairs = {}
+" Set Emmet Binding
+nmap <C-p> <C-y>,
+imap <C-p> <C-y>,
 
 hi MatchParen cterm=none ctermbg=cyan ctermfg=white
 hi Visual cterm=none ctermbg=250
