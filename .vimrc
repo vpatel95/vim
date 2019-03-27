@@ -77,7 +77,6 @@ augroup project
     autocmd!
     autocmd BufRead,BufNewFile *.h,*.c set filetype=c | set cindent | set foldmethod=syntax
     autocmd BufRead,BufNewFile *.go set filetype=go | set foldmethod=syntax
-    autocmd FileType ruby,javascript,css,scss,html set tabstop=2 | set softtabstop=2 | set shiftwidth=2 | set expandtab | set autoindent
 augroup END
 
 " Save key bindings
