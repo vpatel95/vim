@@ -104,10 +104,6 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 
-" CTags key bindings
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
 " Mouse strategy key binding
 nmap <leader>mc :set mouse=c<CR>
 nmap <leader>ma :set mouse=a<CR>
