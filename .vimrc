@@ -16,6 +16,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
@@ -127,6 +128,14 @@ imap <C-f> :FZF<CR>
 " Set Emmet Binding
 nmap <C-p> <C-y>,
 imap <C-p> <C-y>,
+
+" Set NerdTree Bindings
+let g:NERDTreeQuitOnOpen=0
+let NERDTreeShowHidden=1
+nmap <leader>k :NERDTreeToggle<CR>
+nmap <leader>nt :NERDTree<CR>
+nmap <leader>ntc :NERDTreeClose<CR>
+nmap <leader>ntr :NERDTreeRefreshRoot<CR>
 
 hi MatchParen cterm=none ctermbg=cyan ctermfg=white
 hi Visual cterm=none ctermbg=250
