@@ -17,6 +17,7 @@ Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()
 
